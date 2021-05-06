@@ -1,0 +1,23 @@
+# 配置tomcat端口号
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center  #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:wangjianping0/cloud20210322config.git     #GitHub上面的git仓库名字
+          ####搜索目录
+          search-paths:
+            - cloud20210322config
+      label: main
+
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
