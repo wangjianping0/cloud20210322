@@ -1,0 +1,14 @@
+# 配置tomcat端口号
+server:
+  port: 83
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+#消费者即将访问的微服务名称(成功注册进nacos的服务提供者名称)
+service-url:
+  nacos-user-service: http://nacos-payment-provider

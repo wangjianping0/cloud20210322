@@ -1,0 +1,16 @@
+# 配置tomcat端口号
+server:
+  port: 9004
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.103.118.102:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
